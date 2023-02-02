@@ -1,16 +1,18 @@
-h1 = Harcos('Spartakus', 200, 2)
-h2 = Harcos('Herkules', 120, 2)
+import pygame
 
-kor = 1
-while not h1.harcol(h2):
-  print(f'{kor}. kör:')
-  print(h1)
-  print(h2)
-  kor+=1
+WIDTH, HEIGHT = 900, 500
+WIN =pygame.display.set_mode((WIDTH, HEIGHT))
 
-if h1.getEletero()<1 and h2.getEletero()<1:
-  print('Mindketten veszítettel!')
-elif h1.getEletero() < 1:
-  print(f'Nyertes: {h2}')
-else:
-  print(f'Nyertes: {h2}')
+def main():
+
+    run = True
+    while run:
+
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                run = False
+
+    pygame.quite()
+
+if __name__ == "__main__":
+    main()
