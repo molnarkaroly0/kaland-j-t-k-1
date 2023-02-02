@@ -25,8 +25,8 @@ class Harcos:
   def __repr__(self):
     return f'<object.harcos: {self.nev}, HE:{self.getHarciero()}, EE:{self.getEletero()})>'
 
-    h1 = Harcos('Spartakus', 200, 30)
-h2 = Harcos('Herkules', 120, 40)
+h1 = Harcos('Spartakus', 20, 2)
+h2 = Harcos('Herkules', 10, 2)
 
 kor = 1
 while not h1.harcol(h2):
