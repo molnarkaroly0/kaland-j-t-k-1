@@ -9,20 +9,20 @@ class Harcos:
   def getEletero(self):
     return self.eletero
 
-  def getHarciero(self):
+def getHarciero(self):
     return self.harciero
 
-  def sebzodik(self, harciero):
+def sebzodik(self, harciero):
     self.eletero -= harciero
 
-  def harcol(self, harcos):
+def harcol(self, harcos):
     self.sebzodik(harcos.getHarciero())
     harcos.sebzodik(self.getHarciero())
     if self.getEletero() < 1 or harcos.getEletero() < 1:
       return True
     return False
 
-  def __repr__(self):
+def __repr__(self):
     return f'<object.harcos: {self.nev}, HE:{self.getHarciero()}, EE:{self.getEletero()})>'
 
 h1 = Harcos('Spartakus', 20, 2)
