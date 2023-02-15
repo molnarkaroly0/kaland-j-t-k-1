@@ -1,43 +1,39 @@
-import pygame
+import json
 
-class Harcos:
-  def __init__(self, nev, eletero, harciero):
-    self.nev = nev
-    self.eletero = eletero
-    self.harciero = harciero
+with open('index.json', 'r') as f:
+  json_object = json.loads(f.read())
 
-  def getEletero(self):
-    return self.eletero
+  a = data['cím']
 
-def getHarciero(self):
-    return self.harciero
+  print(a)
 
-def sebzodik(self, harciero):
-    self.eletero -= harciero
+print(json_object['1.-kártya'][0]['name'])
 
-def harcol(self, harcos):
-    self.sebzodik(harcos.getHarciero())
-    harcos.sebzodik(self.getHarciero())
-    if self.getEletero() < 1 or harcos.getEletero() < 1:
-      return True
-    return False
+class Person:
 
-def __repr__(self):
-    return f'<object.harcos: {self.nev}, HE:{self.getHarciero()}, EE:{self.getEletero()})>'
+   def __init__(self, name, age, weight):
+    self.name = name
+    self.age = age
+    self.weight = weight
 
-h1 = Harcos('Spartakus', 20, 2)
-h2 = Harcos('Herkules', 10, 2)
+   def print_info(self):
+    print(self.name, self.age, self.weight)
 
-kor = 1
-while not h1.harcol(h2):
-  print(f'{kor}. kör:')
-  print(h1)
-  print(h2)
-  kor+=1
+   def get_older(self, years):
+    self.age += years
 
-if h1.getEletero()<1 and h2.getEletero()<1:
-  print('Mindketten veszítettel!')
-elif h1.getEletero() < 1:
-  print(f'Nyertes: {h2}')
-else:
-  print(f'Nyertes: {h2}')
+   def save_to_json(self, filename):
+    person_dict = {'name': self.name, 'age': self.age, 'weight': self.weight}
+    with open(filename, 'w') as f:
+      f.write(json.dumps(person_dict, indent=2))
+
+   def load_from_json(self, filename):
+    with open(filename, 'r') as f:
+      data = json.loads(f.read())
+
+      self.name = data['name']
+      self.age = data['age']
+      self.weight = data['weight']
+
+
+
