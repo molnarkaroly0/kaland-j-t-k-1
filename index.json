@@ -7,6 +7,7 @@
         "allam": "NY",
         "iranyitoSzam": "10021"
     },
+    "1-kártya":
     [
         {
           "1.": "Belöknek a lenti alagútba, és rád zárják az ajtót, kizárva ezzel a nyíláson át beszűrődő természetes világosságot. Innentől kezdve kizárólag a falra rögzített fáklyáktól remélhetsz valamennyi fényt. Ahogy szemed hozzászokik a homályhoz, látod, hogy az alagút észak felé indul. Nagyot sóhajtasz a dolog igazságtalansága felett, majd elindulsz abba az irányba. Lapozz a 41-re."
@@ -117,7 +118,7 @@
             "36.":"Semmit nem találsz. így északra folytatod az utad. Lapozz a 98-ra."
         },
         {
-            "37.":""
+            "37.":"A törmelékek közt kutatva belerúgsz valami fémes dologba. Miután eltakarítottad a környékéről a szemetet, egy masszív csapóajtó körvonalai rajzolódnak ki előtted a padlóban. nem tudod megállapítani, hogy túl rozsdás-e ahhoz, hogy fel lehessen nyitni, te mindenesetre megpróbálod. tedd próbára szerencséd! Ha szerencsés vagy, lapozz a 199-re. Hogyha nincs szerencséd, lapozz a 130-ra."
         },
         {
             "38.":""
@@ -609,3 +610,4 @@
             "200.":""
         }
     ]
+}
