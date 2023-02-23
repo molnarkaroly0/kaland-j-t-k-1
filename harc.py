@@ -93,19 +93,6 @@ def Iszapsarkany2():
     Eidmg = 9
     return f'Első Iszapsárkány ellenfél; Életereje: {EIhp}, Ügyessége: {Eidmg}'
 
-class Tolvaj:
-    def __init__(self, Thp, Tdmg):
-        self.Thp = Thp
-        self.Tdmg = Tdmg
-
-    def getEletero(self):
-      return self.eletero
-
-    def getHarciero(self):
-      return self.harciero
-
-    
-
 print(*dobas)
 print(dobas2)
 print(dobas3)
