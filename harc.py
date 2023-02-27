@@ -112,3 +112,17 @@ print(dobas3)
 print(f'Saját Életerő: {sajathp}')
 print(f'Saját Ügyesség: {sajatdmg}')
 print(f'Saját Szerencse: {sajatluck}')
+
+nem = ()
+érték = -1
+igen = ()
+kérdés = input('próbára teszed a szerencsédet?(igen/nem)')
+if kérdés == igen:
+    print('próbára tetted a szerencsédez')
+    sajatluck += érték
+    print(f'a te szerencséd {sajatluck}')
+    
+else:
+    kérdés == nem
+    print('nem tetted próbára a szerencsédet')
+    print(f'a te szerencséd {sajatluck}')
