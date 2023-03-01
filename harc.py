@@ -1,4 +1,5 @@
 import random
+import json
 
 dobas = [random.randint(1,6) for _ in range(2)]
 dobas2 = random.randint(1,6)
@@ -6,7 +7,7 @@ dobas3 = random.randint(1,6)
 
 sajathp = sum(dobas) + 12
 sajatdmg = dobas2 + 6
-sajatluck = dobas3 + 6
+sajatluckmax = dobas3 + 6
 
 def Tolvaj():
     Thp = 6
@@ -111,18 +112,35 @@ print(dobas2)
 print(dobas3)
 print(f'Saját Életerő: {sajathp}')
 print(f'Saját Ügyesség: {sajatdmg}')
-print(f'Saját Szerencse: {sajatluck}')
+print(f'Saját Szerencse: {sajatluckmax}')
 
-nem = ()
-érték = -1
-igen = ()
+sajatluck = (sajatluckmax)
+érték = 1
 kérdés = input('próbára teszed a szerencsédet?(igen/nem)')
-if kérdés == igen:
-    print('próbára tetted a szerencsédez')
-    sajatluck += érték
-    print(f'a te szerencséd {sajatluck}')
+if kérdés == 'igen':
+    dobas4 = random.randint(1,6)
+    szamok = [dobas4, sajatluck]
+    eredmeny = sum(szamok)
+    print(f'a te szerencséd {eredmeny}')
+    print(f'a te maximális szerencséd {sajatluckmax}')
     
-else:
-    kérdés == nem
+elif kérdés == 'nem':
     print('nem tetted próbára a szerencsédet')
-    print(f'a te szerencséd {sajatluck}')
+    print(f'a te szerencséd {sajatluckmax}')
+
+def Tolvaj(self, Thp, Tdmg):
+    self.Thp = Thp = 6
+    self.Thp = Tdmg = 7
+    return f'Tolvaj ellenfél; Életereje: {Thp}, Ügyessége {Tdmg}'
+
+# Fájl beolvasása
+with open('index.json', 'r', encoding="utf-8") as f:
+    kartyak = json.load(f)
+e = 110
+# JSON adatok feldolgozása
+szoveg = kartyak["a"][e-1]["szoveg"]
+
+
+    # Kártya adatainak felhasználása
+print('\n')
+print(f"Pálya: {szoveg}")
