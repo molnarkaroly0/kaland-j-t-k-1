@@ -1,39 +1,17 @@
 import json
 
-with open('index.json', 'r') as f:
-  json_object = json.loads(f.read())
 
-  a = data['cím']
+# Fájl beolvasása
+with open('index.json', 'r', encoding="utf-8") as f:
+    kartyak = json.load(f)
+e = 4
+# JSON adatok feldolgozása
+szoveg = kartyak["a"][e-1]
 
-  print(a)
 
-print(json_object['1.-kártya'][0]['name'])
-
-class Person:
-
-   def __init__(self, name, age, weight):
-    self.name = name
-    self.age = age
-    self.weight = weight
-
-   def print_info(self):
-    print(self.name, self.age, self.weight)
-
-   def get_older(self, years):
-    self.age += years
-
-   def save_to_json(self, filename):
-    person_dict = {'name': self.name, 'age': self.age, 'weight': self.weight}
-    with open(filename, 'w') as f:
-      f.write(json.dumps(person_dict, indent=2))
-
-   def load_from_json(self, filename):
-    with open(filename, 'r') as f:
-      data = json.loads(f.read())
-
-      self.name = data['name']
-      self.age = data['age']
-      self.weight = data['weight']
+# Kártya adatainak felhasználása
+print('\n')
+print(f"Pálya: {szoveg} \n")
 
 
 
